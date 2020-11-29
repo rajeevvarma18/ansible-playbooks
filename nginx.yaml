@@ -1,0 +1,9 @@
+---
+- hosts: 192.168.56.5
+  tasks:
+   - name: install webpackage
+     apt: name=nginx state=present
+   - name: restart webserver service
+     service: name=nginx state=restarted
+     when: ansible_os_family=='Debian'
+

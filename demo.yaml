@@ -1,0 +1,7 @@
+---
+- hosts: 192.168.56.7
+  tasks:
+   - name: epel-release
+     yum: name=epel-release
+   - name: ansible
+     yum: name=ansible state=present

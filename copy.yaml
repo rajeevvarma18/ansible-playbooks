@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks:
+   - name: copy files
+     template:
+       src: /etc/ansible/rama
+       dest: /tmp/rama
+       mode: 0600
